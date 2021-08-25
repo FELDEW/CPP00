@@ -1,21 +1,10 @@
 #include <iostream>
-#include <string>
 #include "PhoneBook.hpp"
-#include "contact.hpp"
 
 int	error(const char *msg)
 {
 	std::cout << msg << std::endl;
 	return (1);
-}
-
-void	print_formatted_field(std::string str)
-{
-	if (str.length > 10)
-		std::cout << std::setw(10) << str.substr(0, 9).append(".") << "|";
-	else
-		std::cout << std::right << std::setfill(' ') << std::setw(10) << str << "|";
-	std::cout << std::endl;
 }
 
 void	do_commands(void)
@@ -27,7 +16,8 @@ void	do_commands(void)
 	finish = 0;
 	while (finish == 0)
 	{
-		std::cin >> command;
+		std::cout << "Input commands ADD, SEARCH or EXIT: ";
+		std::getline(std::cin, command);
 		if (command == "EXIT")
 			finish = 1;
 		else if (command == "ADD")

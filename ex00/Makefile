@@ -6,7 +6,7 @@
 #    By: hbuck <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/08 11:40:39 by hbuck             #+#    #+#              #
-#    Updated: 2021/08/08 11:44:51 by hbuck            ###   ########.fr        #
+#    Updated: 2021/08/25 11:41:55 by hbuck            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJS		=	$(SRCS:.cpp=.o)
 
 CPP			=	clang++
 
-CFLAGS		=	-Wall -Wextra -Werror 
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
 
