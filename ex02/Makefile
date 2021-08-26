@@ -7,6 +7,9 @@ OBJS		=	$(SRCS:.cpp=.o)
 
 CPP			=	clang++
 
+%.o:		%.cpp 
+			$(CPP)   -c $< -o $(<:.cpp=.o)
+
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 RM			=	rm -f
